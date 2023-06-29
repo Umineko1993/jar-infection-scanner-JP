@@ -53,7 +53,7 @@
       this.groupBox1.Size = new System.Drawing.Size(1017, 48);
       this.groupBox1.TabIndex = 0;
       this.groupBox1.TabStop = false;
-      this.groupBox1.Text = "Folder/File:";
+      this.groupBox1.Text = "フォルダ/ファイル:";
       // 
       // buttonBrowse
       // 
@@ -63,7 +63,7 @@
       this.buttonBrowse.Name = "buttonBrowse";
       this.buttonBrowse.Size = new System.Drawing.Size(56, 21);
       this.buttonBrowse.TabIndex = 1;
-      this.buttonBrowse.Text = "Browse";
+      this.buttonBrowse.Text = "参照";
       this.buttonBrowse.UseVisualStyleBackColor = true;
       this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
       // 
@@ -87,7 +87,7 @@
       this.buttonScan.Name = "buttonScan";
       this.buttonScan.Size = new System.Drawing.Size(62, 27);
       this.buttonScan.TabIndex = 1;
-      this.buttonScan.Text = "Scan";
+      this.buttonScan.Text = "スキャン";
       this.buttonScan.UseVisualStyleBackColor = true;
       this.buttonScan.Click += new System.EventHandler(this.buttonScan_Click);
       // 
@@ -104,7 +104,7 @@
       this.groupBox2.Size = new System.Drawing.Size(505, 309);
       this.groupBox2.TabIndex = 2;
       this.groupBox2.TabStop = false;
-      this.groupBox2.Text = "Output:";
+      this.groupBox2.Text = "出力:";
       // 
       // textBoxOutput
       // 
@@ -139,7 +139,7 @@
       this.buttonClearOutput.Name = "buttonClearOutput";
       this.buttonClearOutput.Size = new System.Drawing.Size(62, 27);
       this.buttonClearOutput.TabIndex = 4;
-      this.buttonClearOutput.Text = "Clear";
+      this.buttonClearOutput.Text = "クリア";
       this.buttonClearOutput.UseVisualStyleBackColor = true;
       this.buttonClearOutput.Click += new System.EventHandler(this.buttonClearOutput_Click);
       // 
@@ -155,7 +155,7 @@
       this.groupBox3.Size = new System.Drawing.Size(506, 309);
       this.groupBox3.TabIndex = 5;
       this.groupBox3.TabStop = false;
-      this.groupBox3.Text = "Infected files:";
+      this.groupBox3.Text = "感染したファイル:";
       // 
       // textBoxDetections
       // 
@@ -207,7 +207,7 @@
       this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
       this.MinimumSize = new System.Drawing.Size(735, 476);
       this.Name = "Form1";
-      this.Text = "Jar Malware Scanner";
+      this.Text = "Jarマルウェアスキャナー_JP";
       this.groupBox1.ResumeLayout(false);
       this.groupBox1.PerformLayout();
       this.groupBox2.ResumeLayout(false);

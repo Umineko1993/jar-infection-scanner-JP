@@ -1,15 +1,16 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JarInfectionScanner")]
+[assembly: AssemblyTitle("Jarマルウェアスキャナー_JP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JarInfectionScanner")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyProduct("Jarマルウェアスキャナー_JP")]
+[assembly: AssemblyCopyright("Copyright ©  2023 Saso-Utano")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,3 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.1.0")]
 [assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: NeutralResourcesLanguage("ja-JP")]

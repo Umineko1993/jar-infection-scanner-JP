@@ -38,7 +38,7 @@ namespace JarInfectionScanner {
 
       try {
         await Task.Run(() => {
-          AddOutputLine("Searching for files (this may take a while) ...");
+          AddOutputLine("ファイルの検索(時間がかかる場合があります)");
 
           int detectionsFound = 0;
 
@@ -47,7 +47,7 @@ namespace JarInfectionScanner {
 
           int i = 0;
           foreach (var jarFile in jarFiles) {
-            AddOutputLine($"[{i + 1}/{jarFiles.Count()}] Scanning {jarFile} ...");
+            AddOutputLine($"[{i + 1}/{jarFiles.Count()}] {jarFile} を確認中");
 
             if (CheckJarFile(jarFile)) {
               detectionsFound++;
@@ -60,13 +60,13 @@ namespace JarInfectionScanner {
             i++;
           }
 
-          AddOutputLine("Scan Complete");
+          AddOutputLine("スキャン完了");
 
           BeginInvoke(new Action(() => {
             if (detectionsFound > 0) {
-              labelStatus.Text = $"Scan complete - found {detectionsFound} infected files";
+              labelStatus.Text = $"スキャン完了 - {detectionsFound} の感染ファイルを検出しました";
             } else {
-              labelStatus.Text = $"Scan complete - no infected files found";
+              labelStatus.Text = $"スキャン完了 - 感染ファイルは検出されませんでした";
             }
           }));
         });
@@ -87,14 +87,14 @@ namespace JarInfectionScanner {
           AddFiles(dir, files);
         }
       } catch (UnauthorizedAccessException) {
-        AddOutputLine($"Encountered unaccesible file in {path}");
+        AddOutputLine($"{path}でアクセス不能なファイルがありました");
       }
     }
 
     private void buttonBrowse_Click(object sender, EventArgs e) {
       var dialog = new CommonOpenFileDialog {
         IsFolderPicker = true,
-        Title = "Select a Folder"
+        Title = "フォルダ/ファイルを選択"
       };
 
       if (dialog.ShowDialog() == CommonFileDialogResult.Ok) {
@@ -145,7 +145,7 @@ namespace JarInfectionScanner {
               foreach (byte[] sequence in kSignatures) {
                 // if (ContainsByteArray(buffer, sequence)) {
                 if (QuickBinaryFind.FindByteSubstring(buffer, sequence) != -1) {
-                  string line = $"!!!!{jarFilePath} is infected" + Environment.NewLine;
+                  string line = $"{jarFilePath}が感染している可能性があります" + Environment.NewLine;
                   AddOutputLine(line);
                   AddDetectionLine(line);
                   return true;
@@ -155,7 +155,7 @@ namespace JarInfectionScanner {
           }
         }
       } catch (Exception ex) {
-        AddOutputLine($"Error while extracting {jarFilePath}: {ex.Message}");
+        AddOutputLine($"{jarFilePath}で抽出エラーが発生しました: {ex.Message}");
       }
 
       return false;
